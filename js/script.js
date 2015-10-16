@@ -19,7 +19,6 @@ $(function() {
     });
 
     var form = $('#form');
-    var formData = $(form).serialize();
 
     form.validate({
         errorElement: 'span',
@@ -58,12 +57,13 @@ $(function() {
             $(form).ajaxSubmit();
             $('.form').addClass('form--invisible');
             $('.thanks').addClass('thanks--active');
+            return false;
           }
     });
 
     $.ajax({
         type: 'POST',
         url: $(form).attr('action'),
-        data: formData
+        data: form.serialize()
     })
 })
