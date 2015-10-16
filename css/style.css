@@ -51,38 +51,73 @@ ul, li {
     list-style: none;
 }
 
-.container {
-    padding: 10px 20px;
+.wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: url(../img/bg-welcome.jpg) center 100%/cover no-repeat;
+}
+
+.wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 0;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: table;
+    position: relative;
+    z-index: 1;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo {
+    margin-bottom: 5%;
 }
 
 .logo__img {
     width: 180px;
-    margin-bottom: 10px;
 }
 
 .header {
-    margin: 0 0 10px 0;
-    font-size: 1.5em;
+    margin: 0 0 5% 0;
+    color: #fff;
+    font-size: 1.2em;
     font-family: RalewayThin, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
 .text {
+    margin-bottom: 5%;
+    color: #fff;
+    font-size: .9em;
     line-height: 1.5;
     font-family: RalewayLight, Helvetica, Arial, sans-serif;
-}
-
-.screen {
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    text-align: center;
 }
 
 .input {
     width: 70%;
     max-width: 406px;
     height: 38px;
+    margin: 10px auto 5px auto;
     display: block;
     padding: 0 5px;
     box-sizing: border-box;
@@ -104,6 +139,8 @@ ul, li {
     max-width: 406px;
     height: 38px;
     display: block;
+    margin: 20px auto;
+    vertical-align: top;
     padding: 0 5px;
     box-sizing: border-box;
     border: 2px solid #71bf44;
@@ -122,43 +159,6 @@ ul, li {
     border: 2px solid #71bf44;
     background: transparent;
     color: #71bf44;
-}
-
-.welcome {
-    background: url(../img/bg-welcome.jpg) center 100%/cover no-repeat;
-}
-
-.welcome__container {
-    position: relative;
-    z-index: 1;
-}
-
-.welcome:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .6);
-    z-index: 0;
-}
-
-.welcome__header, .welcome__text, .footer__text {
-    color: #fff;
-}
-
-.welcome__text {
-    margin-bottom: 10px;
-}
-
-.welcome__input {
-    margin: 10px auto 5px auto;
-}
-
-.welcome__button {
-    margin: 20px auto;
-    vertical-align: top;
 }
 
 .thanks {
@@ -181,80 +181,6 @@ ul, li {
     display: block;
 }
 
-.features__container {
-    padding-top: 30px;
-}
-
-.features__header {
-    color: #555555;
-    margin-bottom: 20px;
-}
-
-.features__items {
-    margin-bottom: 20px;
-}
-
-.features__info {
-    width: 70%;
-    margin-left: 5%;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    line-height: 1.5;
-    color: #555555;
-}
-
-.features__img {
-    vertical-align: top;
-}
-
-.features__title, .footer__info {
-    font-size: 1.3em;
-    font-family: RalewayLight, Helvetica, Arial, sans-serif;
-}
-
-.footer {
-    background: #555555;
-}
-
-.footer__link {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
-}
-
-.footer__link:hover {
-    color: #71bf44;
-    border-bottom: 1px solid #71bf44;
-}
-
-.footer__info {
-    line-height: 1.5;
-    color: #555555;
-    font-size: 1.3em;
-}
-
-.fotorama__nav-wrap {
-    position: absolute;
-    bottom: 10px;
-    display: none;
-}
-
-.fotorama__dot {
-    display: block;
-    width: 10px;
-    height: 10px;
-    position: relative;
-    top: 12px;
-    left: 6px;
-    border-radius: 50%;
-    border: 2px solid #7f7f7f;
-}
-
-.fotorama__nav__frame.fotorama__active .fotorama__dot {
-    border: 7px solid #71bf44;
-}
-
 span.error {
     color: #fff;
     line-height: 1.3;
@@ -265,25 +191,43 @@ span.error {
     visibility: hidden;
 }
 
-@media  (min-width: 768px) {
+@media  (min-width: 360px) {
 
-    .container {
-        padding: 50px;
-        margin: 0 auto;
+    .logo__img {
+        width: 240px;
     }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .text {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 768px){
+
+    .wrap {
+        height: auto;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) {
 
     .logo__img {
         width: 400px;
-        margin-bottom: 30px;
+    }
+
+    .header {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        letter-spacing: 2px;
     }
 
     .text {
         font-size: 1.2em;
-    }
-
-    .header {
-        font-size: 2.5em;
-        letter-spacing: 2px;
     }
 
     .input {
@@ -294,48 +238,26 @@ span.error {
         width: 50%;
     }
 
-    .welcome__header {
-        margin-bottom: 10px;
-    }
-
-    .welcome__label {
+    .label {
         width: 50%;
         display: block;
         margin: 10px auto;
-    }
-
-    .features__header {
-        margin-bottom: 50px;
-    }
-
-    .features__items {
-        margin-bottom: 50px;
-    }
-
-    .features__title {
-        font-size: 1.5em;
-    }
-
-    .fotorama__nav-wrap {
-        display: block;
     }
 
 }
 
 @media  (min-width: 1200px) {
 
-    .container {
+    .row {
         width: 1100px;
-        padding: 100px 0;
-        margin: 0 auto;
     }
 
     .logo__img {
         width: 400px;
     }
 
-    .welcome__logo {
-        margin-bottom: 100px;
+    .logo {
+        margin-bottom: 8%;
     }
 
     .header {
@@ -347,24 +269,12 @@ span.error {
         display: inline-block;
     }
 
-    .welcome {
-        min-height: 100%;
-    }
-
-    .welcome__container {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        transform: translateY(-65%);
-    }
-
-    .welcome__text {
+    .text {
         width: 90%;
-        margin: 0 auto 70px auto;
+        margin: 0 auto 60px auto;
     }
 
-    .welcome__label {
+    .label {
         width: 20%;
         display: inline-block;
         margin: 0 10px 0 0;
@@ -373,11 +283,11 @@ span.error {
         position: relative;
     }
 
-    .welcome__input {
+    .input {
         margin: 0;
     }
 
-    .welcome__button {
+    .button {
         display: inline-block;
         margin: 0;
     }
@@ -386,18 +296,9 @@ span.error {
         font-size: 1.5em;
     }
 
-    .features__items {
-        width: 33%;
-        display: inline-block;
-    }
-
     span.error {
         position: absolute;
         top: 45px;
         left: 0;
-    }
-
-    .footer__container {
-        padding: 50px 0;
     }
 }

@@ -2,87 +2,41 @@
 <html>
     <head>
         <title>Re-forma</title>
-        <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="screen welcome">
-            <div class="container welcome__container">
-                <div class="logo welcome__logo">
-                    <img src="img/logo1.png" class="logo__img">
-                </div>
-                <h1 class="header welcome__header">Перемены начинаются с&nbsp;нас</h1>
-                <div class="text welcome__text">
-                    Мебель на &nbsp;заказ&nbsp;— это&nbsp;просто. Это&nbsp;действительно просто. Нужно только захотеть стать счастливым обладателем мебели. Остальное&nbsp;— дело техники. Оставьте заявку, и&nbsp;наши специалисты свяжутся с&nbsp;вами.
-                </div>
-                <form class="welcome__form" id="welcome__form" method="post" action="mailer.php">
-                    <label class="welcome__label">
-                        <input class="input welcome__input" placeholder="Имя" type="text" name="yourname">
-                    </label>
-                    <label class="welcome__label">
-                        <input class="input welcome__input" placeholder="E-mail" type="email" name="email">
-                    </label>
-                    <label class="welcome__label">
-                        <input class="input welcome__input" placeholder="Телефон" type="tel" name="phone">
-                    </label>
-                    <button class="button welcome__button">Оставить заявку</button>
-                </form>
-                <div class="thanks">Спасибо, наши представители свяжутся с&nbsp;вами в&nbsp;скором времени.</div>
-            </div>
-        </div>
-        <div class="screen features">
-            <div class="container features__container">
-                <h1 class="header features__header">Почему мы лучшие?</h1>
-                <ul class="features__list">
-                    <li class="features__items">
-                        <img class="features__img" src="img/design.png">
-                        <div class="features__info">
-                            <div class="features__title">Дизайн</div>
-                            <div class="text features__text">Вся мебель разрабатывается дизайнерами индивидуально, учитывая пожелания каждого клиента.</div>
+        <div class="wrap">
+            <div class="table">
+                <div class="row">
+                    <div class="cell">
+                        <div class="logo">
+                            <img src="img/logo.png" class="logo__img">
                         </div>
-                    </li>
-                    <li class="features__items">
-                        <img class="features__img" src="img/star.png">
-                        <div class="features__info">
-                            <div class="features__title">Качество</div>
-                            <div class="text features__text">Мы используем материалы высшего качества, наши партнёры — компании с мировым именем.</div>
+                        <h1 class="header">Перемены начинаются с&nbsp;нас</h1>
+                        <div class="text">
+                            Закажите идеальную мебель по&nbsp;собственному проекту, разработанному с&nbsp;профессиональным дизайнером. Просто оставьте телефон или&nbsp;почту, и&nbsp;мы свяжемся с&nbsp;вами.
                         </div>
-                    </li>
-                    <li class="features__items">
-                        <img class="features__img" src="img/exp.png">
-                        <div class="features__info">
-                            <div class="features__title">Опыт</div>
-                            <div class="text features__text">У нас девятилетний опыт работы на мебельном рынке.</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="screen slider">
-            <div class="fotorama" data-fit="cover" data-minheight="400" data-position="100% 100%">
-                <img class="slider__item" src="img/slider-1.jpg">
-                <img class="slider__item" src="img/slider-2.jpg">
-                <img class="slider__item" src="img/slider-3.jpg">
-                <img class="slider__item" src="img/slider-4.jpg">
-                <img class="slider__item" src="img/slider-5.jpg">
-            </div>
-        </div>
-        <div class="screen footer">
-            <div class="container footer__container">
-                <div class="logo footer__logo">
-                    <img src="img/logo1.png" class="logo__img">
-                </div>
-                <div class="footer__info">
-                    <span class="text footer__text">Перейти на</span>
-                    <a href="http://www.re-formaufa.ru/" class="footer__link text" target="_blank">сайт студии</a>
+                        <form class="form" id="form" method="post" action="mailer.php">
+                            <label class="label">
+                                <input class="input" placeholder="Имя" type="text" name="yourname">
+                            </label>
+                            <label class="label">
+                                <input class="input" placeholder="E-mail" type="email" name="email">
+                            </label>
+                            <label class="label">
+                                <input class="input" placeholder="Телефон" type="tel" name="phone">
+                            </label>
+                            <button class="button">Оставить заявку</button>
+                        </form>
+                        <div class="thanks">Спасибо, наши представители свяжутся с&nbsp;вами в&nbsp;скором времени.</div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js" type="text/javascript"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/additional-methods.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js" type="text/javascript"></script>

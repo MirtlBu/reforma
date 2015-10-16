@@ -18,7 +18,7 @@ $(function() {
               phone_number.match(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/);
     });
 
-    var form = $('#welcome__form');
+    var form = $('#form');
     var formData = $(form).serialize();
 
     form.validate({
@@ -52,11 +52,11 @@ $(function() {
             }
         },
         errorPlacement: function(error, element) {
-            error.appendTo(element.parent('.welcome__label'));
+            error.appendTo(element.parent('.label'));
         },
         submitHandler: function(form) {
             $(form).ajaxSubmit();
-            $('.welcome__form').addClass('form--invisible');
+            $('.form').addClass('form--invisible');
             $('.thanks').addClass('thanks--active');
           }
     });
