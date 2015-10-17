@@ -55,9 +55,12 @@ ul, li {
     padding: 10px 20px;
 }
 
+.logo {
+    margin-bottom: 10px;
+}
+
 .logo__img {
     width: 180px;
-    margin-bottom: 10px;
 }
 
 .header {
@@ -171,7 +174,6 @@ ul, li {
 
 .welcome__button {
     margin: 20px auto;
-    vertical-align: top;
 }
 
 .thanks {
@@ -247,6 +249,10 @@ ul, li {
     font-size: 1.3em;
 }
 
+.fotorama__wrap {
+    width: 100% !important;
+}
+
 .fotorama__nav-wrap {
     position: absolute;
     bottom: 10px;
@@ -278,6 +284,14 @@ span.error {
     visibility: hidden;
 }
 
+@media only screen and (orientation: landscape) and (max-width: 768px){
+
+    .welcome {
+        height: auto;
+        padding: 10px;
+    }
+}
+
 @media  (min-width: 768px) {
 
     .container {
@@ -285,13 +299,16 @@ span.error {
         margin: 0 auto;
     }
 
+    .logo {
+        margin-bottom: 50px;
+    }
+
     .logo__img {
         width: 400px;
-        margin-bottom: 30px;
     }
 
     .text {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .header {
@@ -308,13 +325,21 @@ span.error {
     }
 
     .welcome__header {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .welcome__text {
+        margin-bottom: 50px;
     }
 
     .welcome__label {
         width: 50%;
         display: block;
         margin: 10px auto;
+    }
+
+    .welcome__button {
+        margin-top: 30px;
     }
 
     .features__header {
@@ -347,8 +372,8 @@ span.error {
         width: 400px;
     }
 
-    .welcome__logo {
-        margin-bottom: 100px;
+    .logo {
+        margin-bottom: 50px;
     }
 
     .header {
@@ -392,6 +417,7 @@ span.error {
 
     .welcome__button {
         display: inline-block;
+        vertical-align: top;
         margin: 0;
     }
 
