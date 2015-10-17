@@ -9,27 +9,31 @@
     </head>
     <body>
         <div class="screen welcome">
-            <div class="container welcome__container">
-                <div class="logo welcome__logo">
-                    <img src="img/logo1.png" class="logo__img">
+            <div class="screen-table container">
+                <div class="screen-row">
+                    <div class="screen-cell">
+                        <div class="logo welcome__logo">
+                            <img src="img/logo1.png" class="logo__img">
+                        </div>
+                        <h1 class="header welcome__header">Перемены начинаются с&nbsp;нас</h1>
+                        <div class="text welcome__text">
+                            Мебель на &nbsp;заказ&nbsp;— это&nbsp;просто. Это&nbsp;действительно просто. Нужно только захотеть стать счастливым обладателем мебели. Остальное&nbsp;— дело техники. Оставьте заявку, и&nbsp;наши специалисты свяжутся с&nbsp;вами.
+                        </div>
+                        <form class="welcome__form" id="welcome__form" method="post" action="mailer.php">
+                            <label class="welcome__label">
+                                <input class="input welcome__input" placeholder="Имя" type="text" name="yourname">
+                            </label>
+                            <label class="welcome__label">
+                                <input class="input welcome__input" placeholder="E-mail" type="email" name="email">
+                            </label>
+                            <label class="welcome__label">
+                                <input class="input welcome__input" placeholder="Телефон" type="tel" name="phone">
+                            </label>
+                            <button class="button welcome__button">Оставить заявку</button>
+                        </form>
+                        <div class="thanks">Спасибо, наши представители свяжутся с&nbsp;вами в&nbsp;скором времени.</div>
+                    </div>
                 </div>
-                <h1 class="header welcome__header">Перемены начинаются с&nbsp;нас</h1>
-                <div class="text welcome__text">
-                    Мебель на &nbsp;заказ&nbsp;— это&nbsp;просто. Это&nbsp;действительно просто. Нужно только захотеть стать счастливым обладателем мебели. Остальное&nbsp;— дело техники. Оставьте заявку, и&nbsp;наши специалисты свяжутся с&nbsp;вами.
-                </div>
-                <form class="welcome__form" id="welcome__form" method="post" action="mailer.php">
-                    <label class="welcome__label">
-                        <input class="input welcome__input" placeholder="Имя" type="text" name="yourname">
-                    </label>
-                    <label class="welcome__label">
-                        <input class="input welcome__input" placeholder="E-mail" type="email" name="email">
-                    </label>
-                    <label class="welcome__label">
-                        <input class="input welcome__input" placeholder="Телефон" type="tel" name="phone">
-                    </label>
-                    <button class="button welcome__button">Оставить заявку</button>
-                </form>
-                <div class="thanks">Спасибо, наши представители свяжутся с&nbsp;вами в&nbsp;скором времени.</div>
             </div>
         </div>
         <div class="screen features">
