@@ -51,6 +51,10 @@ ul, li {
     list-style: none;
 }
 
+button, input {
+    outline: none;
+}
+
 .container {
     padding: 10px 20px;
 }
@@ -65,9 +69,17 @@ ul, li {
 
 .header {
     margin: 0 0 10px 0;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-family: RalewayThin, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subheader {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    font-family: RalewayLight, Helvetica, Arial, sans-serif;
+    font-weight: normal;
 }
 
 .text {
@@ -102,6 +114,7 @@ ul, li {
     max-width: 406px;
     height: 38px;
     display: block;
+    margin: 10px auto 5px auto;
     padding: 0 5px;
     box-sizing: border-box;
     border: 2px solid #c0c0c0;
@@ -110,7 +123,6 @@ ul, li {
     font-family: RalewayLight, Helvetica, Arial, sans-serif;
     color: #656565;
     font-size: 1em;
-    outline: none;
 }
 
 .input:focus {
@@ -122,6 +134,7 @@ ul, li {
     max-width: 406px;
     height: 38px;
     display: block;
+    margin: 20px auto;
     padding: 0 5px;
     box-sizing: border-box;
     border: 2px solid #71bf44;
@@ -132,7 +145,6 @@ ul, li {
     font-family: RalewayRegular, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    outline: none;
     cursor: pointer;
 }
 
@@ -147,6 +159,7 @@ ul, li {
     height: 100%;
     position: relative;
     background: url(../img/bg-welcome.jpg) center 100%/cover no-repeat;
+    color: #fff;
 }
 
 .welcome:after {
@@ -160,22 +173,6 @@ ul, li {
     z-index: 0;
 }
 
-.welcome__header, .welcome__text, .footer__text {
-    color: #fff;
-}
-
-.welcome__text {
-    margin-bottom: 10px;
-}
-
-.welcome__input {
-    margin: 10px auto 5px auto;
-}
-
-.welcome__button {
-    margin: 20px auto;
-}
-
 .thanks {
     height: 25%;
     position: absolute;
@@ -184,9 +181,6 @@ ul, li {
     right: 0;
     display: none;
     margin: 0 auto;
-    color: #fff;
-    font-size: 1em;
-    font-family: RalewayThin, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -196,17 +190,16 @@ ul, li {
     display: block;
 }
 
+.features {
+    color: #555555;
+}
+
 .features__container {
     padding-top: 30px;
 }
 
-.features__header {
-    color: #555555;
-    margin-bottom: 20px;
-}
-
 .features__items {
-    margin-bottom: 20px;
+    margin: 15px 0 20px 0;
 }
 
 .features__info {
@@ -216,20 +209,21 @@ ul, li {
     vertical-align: top;
     text-align: left;
     line-height: 1.5;
-    color: #555555;
 }
 
 .features__img {
     vertical-align: top;
 }
 
-.features__title, .footer__info {
-    font-size: 1.3em;
+.features__title {
+    margin-bottom: 3px;
+    font-size: 1.2em;
     font-family: RalewayLight, Helvetica, Arial, sans-serif;
 }
 
 .footer {
     background: #555555;
+    color: #fff;
 }
 
 .footer__link {
@@ -243,10 +237,12 @@ ul, li {
     border-bottom: 1px solid #71bf44;
 }
 
-.footer__info {
-    line-height: 1.5;
-    color: #555555;
-    font-size: 1.3em;
+.footer-form.form--invisible {
+    display: none;
+}
+
+.footer-thanks {
+    position: relative;
 }
 
 .fotorama__wrap {
@@ -276,7 +272,7 @@ ul, li {
 
 span.error {
     color: #fff;
-    line-height: 1.3;
+    line-height: 1.5;
     font-family: RalewayLight, Helvetica, Arial, sans-serif;
 }
 
@@ -308,12 +304,17 @@ span.error {
     }
 
     .text {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .header {
         font-size: 2.5em;
-        letter-spacing: 2px;
+        margin: 0 0 30px 0;
+    }
+
+    .subheader {
+        font-size: 1.5em;
+        margin: 0 0 30px 0;
     }
 
     .input {
@@ -324,26 +325,14 @@ span.error {
         width: 50%;
     }
 
-    .welcome__header {
-        margin-bottom: 30px;
-    }
-
-    .welcome__text {
-        margin-bottom: 50px;
-    }
-
-    .welcome__label {
+    .label {
         width: 50%;
         display: block;
         margin: 10px auto;
     }
 
-    .welcome__button {
+    .button {
         margin-top: 30px;
-    }
-
-    .features__header {
-        margin-bottom: 50px;
     }
 
     .features__items {
@@ -383,6 +372,8 @@ span.error {
     .button {
         width: 20%;
         display: inline-block;
+        vertical-align: top;
+        margin: 0;
     }
 
     .welcome {
@@ -397,12 +388,7 @@ span.error {
         transform: translateY(-65%);
     }
 
-    .welcome__text {
-        width: 90%;
-        margin: 0 auto 70px auto;
-    }
-
-    .welcome__label {
+    .label {
         width: 20%;
         display: inline-block;
         margin: 0 10px 0 0;
@@ -411,13 +397,7 @@ span.error {
         position: relative;
     }
 
-    .welcome__input {
-        margin: 0;
-    }
-
-    .welcome__button {
-        display: inline-block;
-        vertical-align: top;
+    .input {
         margin: 0;
     }
 
