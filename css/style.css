@@ -57,6 +57,7 @@ button, input {
 
 .container {
     padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -392,7 +393,9 @@ span.error {
         top: 50%;
         left: 0;
         right: 0;
-        transform: translateY(-65%);
+        -webkit-transform: translateY(-65%);
+            -ms-transform: translateY(-65%);
+                transform: translateY(-65%);
     }
 
     .label {
