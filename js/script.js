@@ -66,4 +66,16 @@ $(function() {
         });
     }
 
+    // var height = $('.welcome').height(),
+    //     features = $('.features__items');
+
+    // $(window).scroll(function () {
+    //     if( $(window).scrollTop() > height/1.5){
+    //       features.addClass('features__items--visible');
+    //     }
+    //     else {
+    //         features.removeClass('features__items--visible');
+    //     }
+    // });
+
 })

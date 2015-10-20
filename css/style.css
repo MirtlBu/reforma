@@ -159,6 +159,7 @@ button, input {
     height: 100%;
     position: relative;
     background: url(../img/bg-welcome.jpg) center 100%/cover no-repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 
@@ -200,7 +201,13 @@ button, input {
 
 .features__items {
     margin: 15px 0 20px 0;
+    /*opacity: 0;
+    transition: opacity .5s linear;*/
 }
+
+/*.features__items--visible {
+    opacity: 1;
+}*/
 
 .features__info {
     width: 70%;
